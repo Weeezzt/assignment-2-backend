@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
     <title>movies</title>
 </head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <h1 class="error__title">Could not find a movie with that id</h1>
+    <h2 class="error">ERROR 404</h2>
+    <a href="/" class="error__link"><p>Try a new movie</p></a>
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
