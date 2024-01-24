@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="/main.css"/>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <title>movie</title>
 </head>
 <body>
@@ -23,9 +22,7 @@
         <%}%>
 
         <%if (movie.intro) {%>
-           <md-block>
-            <%=movie.intro%>
-           </md-block>
+            <%-movie.intro%>
         <%}%>
     </div>
     <%- include('./partials/footer.ejs') %>

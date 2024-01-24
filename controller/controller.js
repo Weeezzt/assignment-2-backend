@@ -1,4 +1,5 @@
 import {fetchMovie, fetchMovies} from '../scripts/fetchMovies.js'
+import { marked } from 'marked'
 
 export const homeController = async (req, res) => {
     try {
@@ -14,6 +15,9 @@ export const moviePageController = async (req, res) => {
     try {
         const movie = await fetchMovie(req.params.id)
         if(movie) {
+            if(movie.intro) {
+                movie.intro = marked(movie.intro)
+            }
             res.status(200).render('movie', {movie})
         } else {
             res.status(404).render('404')
