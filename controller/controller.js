@@ -1,4 +1,4 @@
-import {fetchMovie, fetchMovies} from '../fetchMovies.js'
+import {fetchMovie, fetchMovies} from '../scripts/fetchMovies.js'
 
 export const homeController = async (req, res) => {
     try {

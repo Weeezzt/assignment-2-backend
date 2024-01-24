@@ -23,6 +23,10 @@ header {
     color: azure;
 }
 
+.header-a {
+    text-decoration: none;
+}
+
 .home__title {
     margin-left: 50px;
     font-size: 48px;
@@ -110,4 +114,8 @@ footer {
 .footer__title {
     font-size: 38px;
     color: azure;
+}
+
+.footer-a {
+    text-decoration: none;
 }

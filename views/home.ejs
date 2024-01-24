@@ -14,12 +14,11 @@
         <% movies.forEach(movie => {%>
             <li class="list">
                 <a href="/movie/<%=movie.id%>" class="link">
-                    <h3 class="title"><%=movie.attributes.title%></h3>
+                    <h3 class="title"><%=movie.title%></h3>
                 </a>
             </li>
         <%});%>
     </ul>
     <%- include('./partials/footer.ejs') %>
 </body>
-
 </html>
