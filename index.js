@@ -1,7 +1,7 @@
-import app from './scripts/app.js'
+import sslServer from './scripts/app.js'
 
 const port = 5080
 
-app.listen(port, () => {
-    console.log(`Listening on port: ${port}`)
+sslServer.listen(port, () => {
+    console.log(`Listening on secure server on port: ${port}`)
 })
