@@ -5,15 +5,20 @@ import fs from 'fs'
 import path from 'path'
 const app = express()
 
+//This makes it possible to use __dirname in ESM
 const __dirname = path.resolve();
 
+// Set the view engine to ejs
 app.set('view engine', 'ejs')
 
+// Import the routes
 import router from '../routes/routes.js'
 app.use('/', router)
 
+// Serve static files
 app.use('/', express.static('./public'))
 
+// Creating the server using the SSL certificate and using https
 const sslServer = https.createServer(
     {
         key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')),
@@ -22,4 +27,5 @@ const sslServer = https.createServer(
     app
 )
 
+// Export the server
 export default sslServer
