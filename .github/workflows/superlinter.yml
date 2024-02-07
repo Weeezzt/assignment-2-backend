@@ -17,4 +17,5 @@ jobs:
       - name: Run Super-linter
         uses: github/super-linter@v4
         env:
+          VALIDATE_JAVASCRIPT_ES: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
